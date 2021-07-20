@@ -28,6 +28,12 @@ const userSchema = new mongoose.Schema({
             if(!validator.isEmail(value)) throw new Error('invalid email')
         }
     },
+    isAdmin:{
+        type:Boolean,
+        trim:true,
+        required:true,
+        enum:[true,false]
+    },
     // image:{
     //     type:String,
     //     trim:true,
