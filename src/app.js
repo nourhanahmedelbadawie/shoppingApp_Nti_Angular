@@ -9,5 +9,5 @@ app.use(cors())
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-//app.use(userRoutes)
+app.use(userRoutes)
 module.exports = app
