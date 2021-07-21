@@ -120,5 +120,4 @@ class Userx{
         }
     }
 }
-
 module.exports = Userx
