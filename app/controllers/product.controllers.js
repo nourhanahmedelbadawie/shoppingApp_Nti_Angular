@@ -18,7 +18,7 @@ class ProductC{
             res.status(200).send({
                 apiStatus: true,
                 data: productData,
-                message: "user added successful"
+                message: "product added successful"
             })       
         }
         catch(e){
@@ -26,21 +26,6 @@ class ProductC{
                 apiStatus: false,
                 data: e.message, 
                 message: e.message
-            })
-        }
-    }
-    //upload image
-    static uploadProduct=async (reg,res)=>{
-        try{
-            res.status(200).send({
-                apiStatus: true,
-                message: "success"
-            })
-        }catch(e){
-            res.status(500).send({
-                apiStatus: false,
-                data:e.message,
-                message: "err"
             })
         }
     }
