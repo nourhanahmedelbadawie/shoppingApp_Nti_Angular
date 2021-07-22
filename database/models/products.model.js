@@ -5,22 +5,8 @@ const productSchema = new mongoose.Schema({
         type:String,
         trim:true,
     },
-    images:{
-       image:{
-            required:true,
-            type:String,
-            trim:true,
-       }
-    },
-    sizes:[
-        {
-            size:{
-                required:true,
-                type:String,
-                trim:true,
-            }
-        }
-    ],
+    images:[],    
+    sizes:[],
     hasSale:{
         required:true,
         type:Boolean,
@@ -43,15 +29,7 @@ const productSchema = new mongoose.Schema({
         type:Number,
         required:true,
     },
-    colors:[ 
-        {
-            color:{
-                required:true,
-                type:String,
-                trim:true,
-            }
-        }      
-    ]
+    colors:[ ]
 })
 const Product = mongoose.model('Product', productSchema)
 module.exports = Product
