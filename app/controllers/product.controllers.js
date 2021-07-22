@@ -10,8 +10,8 @@ class ProductC{
                 console.log(req.body.type+'-'+req.body.category+(i+1))
                 let data=( req.files[i].originalname.split('.')).pop();
                 let oldName=req.files[i].destination +'/'+ req.files[i].filename;
-                let newName=req.files[i].destination +'/'+ req.body.type+'-'+req.body.category+(i+1) + '.' + data;
-                productData.images.push(req.body.type+'-'+req.body.category+(i+1));
+                let newName=req.files[i].destination +'/'+ req.files[i].filename + '.' + data;
+                productData.images.push(req.files[i].path);
                 fs.rename(oldName,newName,(err)=>{
                     if(err)console.log(err)
                 })
