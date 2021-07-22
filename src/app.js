@@ -4,6 +4,7 @@ require('dotenv').config()
 require('../database/connection')
 const userRoutes = require('../routes/user.route')
 const productRoutes = require('../routes/product.route')
+const promoCodeRoutes = require('../routes/promoCode.route')
 
 const app = express()
 app.use(cors())
@@ -12,4 +13,5 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use('/user',userRoutes)
 app.use('/product',productRoutes)
+app.use('/promo-code',promoCodeRoutes)
 module.exports = app
