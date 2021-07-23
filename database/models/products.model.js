@@ -9,8 +9,7 @@ const productSchema = new mongoose.Schema({
     sizes:[],
     hasSale:{
         required:true,
-        type:Boolean,
-        enum:[true,false]
+        type:Boolean
     },
     type:{
         required:true,

@@ -30,33 +30,19 @@ const userSchema = new mongoose.Schema({
     isAdmin:{
         type:Boolean,
         trim:true,
-        required:true,
-        enum:[true,false]
+        required:true
     },
-    // image:{
-    //     type:String,
-    //     trim:true,
-    // },
     phone:{
         type:String,
         trim:true
     },
-    // addresses:[
-    //     {
-    //         address:{
-    //             addrType:{type:String},
-    //             addrDetails:{type:String}
-    //         }
-    //     }
-    // ],
-    // otp:{
-    //     type:String,
-    //     default: Date.now()
-    // },
-    // userStatus:{
-    //     type:Boolean,
-    //     default:false
-    // },
+    addresses:[
+        {
+            address:{
+                addrDetails:{type:String}
+            }
+        }
+    ],
     tokens:[{
         token:{type:String}
     }]

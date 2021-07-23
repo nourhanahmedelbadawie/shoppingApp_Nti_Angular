@@ -30,7 +30,7 @@ class promoCodeC{
                     data: null
                 })
             }
-            else if(data.startDate.getTime() < currentDate.getTime() && data.endDate.getTime() > start.getTime()){
+            else if(data.startDate.getTime() <= currentDate.getTime() && data.endDate.getTime() >= start.getTime()){
                 res.status(200).send({
                     apiStatus:true,
                     message:"data retrived",
