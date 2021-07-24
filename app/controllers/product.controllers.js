@@ -1,5 +1,10 @@
 const Product = require('../../database/models/products.model')
 const fs = require('fs')
+
+
+
+
+
 class ProductC{
     static enterProduct =async (req,res)=>{
         try{
@@ -30,5 +35,58 @@ class ProductC{
             })
         }
     }
+  
+    static getAllPdt =async (req,res)=>{
+     
+                    try{
+                  
+                   
+                    const data = await Product.find()
+                    res.status(200).send({
+                        apiStatus:true,
+                        message:"data retrived",
+                        data: data,
+                        count: data.length
+                    })
+
+
+                         
+        res.status(200).send(ProductrMap)
+    }
+                    
+                   
+                    catch(e){
+                        res.status(500).send({
+                            apiStatus:false,
+                            message:"error loading data",
+                        })
+                    }
+    }
+    static getSinglePdt =async (req,res)=>{
+            try{
+                let id=req.params.id;
+                const data=    await Product.findById(id)
+                if(data){
+                  res.send(data)
+                }}
+           
+            catch(e){
+                res.status(500).send({
+                    apiStatus:false,
+                    message:"error loading data",
+                    data: e
+                })
+            }
+        }
+    
 }
 module.exports = ProductC
+
+
+
+
+
+
+
+
+

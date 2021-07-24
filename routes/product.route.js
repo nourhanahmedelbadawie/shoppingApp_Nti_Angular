@@ -6,5 +6,9 @@ const multer=require('multer')
 const upload=multer({dest:'public/images/products'})
 router.post('/enter-product',auth,upload.array('products'),productController.enterProduct)
 
+router.get('/allproducts',productController.getAllPdt)
+router.get('/allproducts/:id',productController.getSinglePdt)
+
+
 
 module.exports=router
