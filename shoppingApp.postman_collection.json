@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "76c1740f-d6b3-4e36-8523-f5bb46b38794",
+		"name": "shoppingApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "enter-product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "response language must be [en or ar]",
+						"key": "lang",
+						"type": "text",
+						"value": "en"
+					},
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "category",
+							"value": "kids",
+							"type": "text"
+						},
+						{
+							"key": "products",
+							"type": "file",
+							"src": "/C:/Users/Esraa/Pictures/mobile/finalposter.jpg"
+						},
+						{
+							"key": "products",
+							"type": "file",
+							"src": "/C:/Users/Esraa/Pictures/mobile/IMG_20180906_124235.jpg"
+						},
+						{
+							"key": "sizes",
+							"value": "sm",
+							"type": "text"
+						},
+						{
+							"key": "sizes",
+							"value": "lg",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "t-shirt",
+							"type": "text"
+						},
+						{
+							"key": "priceBeforSale",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "priceAfterSale",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "AvailableInStock",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "colors",
+							"value": "red",
+							"type": "text"
+						},
+						{
+							"key": "hasSale",
+							"value": "true",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/product/enter-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"enter-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enter-promo-code",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "response language must be [en or ar]",
+						"key": "lang",
+						"type": "text",
+						"value": "en"
+					},
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"promoCode\":\"12mm3ddnkkjjlnll\",\r\n    \"startDate\":\"10-10-2020\",\r\n    \"endDate\":\"11-11-2020\",\r\n    \"discountValue\":\"50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/promo-code/enter-promo-code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"promo-code",
+						"enter-promo-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-promo-code",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "response language must be [en or ar]",
+						"key": "lang",
+						"type": "text",
+						"value": "en"
+					},
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/promo-code/60f9c9201b1f301d8c52f5b2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"promo-code",
+						"60f9c9201b1f301d8c52f5b2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"nour\",\r\n    \"birthDate\":\"12-10-2020\",\r\n    \"password\":\"123456\",\r\n    \"email\":\"nour@gmail.com\",\r\n    \"isAdmin\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"123456\",\r\n    \"email\":\"nour@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
