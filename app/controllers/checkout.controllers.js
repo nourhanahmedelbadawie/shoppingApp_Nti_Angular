@@ -1,4 +1,6 @@
 const CheckOutModel = require('../../database/models/checkout.model')
+var emailUser = require('../middleware/email-user');
+
 class CheckOutC{
     static checkOut =async (req,res)=>{ 
         try{
@@ -12,6 +14,7 @@ class CheckOutC{
                 message: "success",
                 data: checkoutData
             })
+            sendEmailToUSer(req.user.email)
         }
         catch(e){
             res.status(500).send({
@@ -20,6 +23,15 @@ class CheckOutC{
                 data: e
             })
         }
+    }
+}
+const sendEmailToUSer = async(email)=>{
+    try {
+     await emailUser(email)
+    
+    }
+    catch(e){
+        console.log(e)
     }
 }
 module.exports = CheckOutC
