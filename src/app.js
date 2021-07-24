@@ -5,6 +5,7 @@ require('../database/connection')
 const userRoutes = require('../routes/user.route')
 const productRoutes = require('../routes/product.route')
 const promoCodeRoutes = require('../routes/promoCode.route')
+const checkoutRoutes = require('../routes/checkout.route')
 
 const chatRoutes = require('../routes/chat.route')
 
@@ -16,6 +17,7 @@ app.use(express.json())
 app.use('/user',userRoutes)
 app.use('/product',productRoutes)
 app.use('/promo-code',promoCodeRoutes)
+app.use('/check-out',checkoutRoutes)
 
 app.use('/chat',chatRoutes)
 
