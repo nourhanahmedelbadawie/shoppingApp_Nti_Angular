@@ -1,4 +1,7 @@
-const User = require('../../database/models/user.model')
+const User = require('../../database/models/user.model');
+const sendEmail = require("../middleware/email-user");
+const crypto = require("crypto");
+const Joi = require("joi");
 class Userx{
     static register = async (req,res)=>{
         try{
@@ -145,5 +148,36 @@ class Userx{
     }
 
    }
+   //reset password
+   static passwordReset = async(req,res)=>{
+    try {
+        const schema = Joi.object({ email: Joi.string().email().required() });
+        const { error } = schema.validate(req.body);
+        if (error) return res.status(400).send(error.details[0].message);
+        const user = await User.findOne({ email: req.body.email });
+        const id=user._id;
+        const token=user.tokens
+        // if (!user)
+        //     return res.status(400).send("user with given email doesn't exist");
+
+        // let token = await User.findOne({ userId: user._id });
+        // if (!token) {
+        //     token = await new User({
+        //         userId: user._id,
+        //         token: crypto.randomBytes(32).toString("hex"),
+        //     }).save();
+        // }
+
+        const link = `${process.env.BASE_URL}/password-reset/${id}/${token}`;
+        console.log(user.email)
+        await sendEmail(user.email);
+        res.send("password reset link sent to your email account");
+    } catch (error) {
+        res.send("An error occured");
+        console.log(error);
+    }
+}
+
+
 }
 module.exports = Userx

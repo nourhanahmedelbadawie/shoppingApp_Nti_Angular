@@ -43,6 +43,14 @@ const userSchema = new mongoose.Schema({
             }
         }
     ],
+    otp:{
+        type:String,
+        default: Date.now()
+    },
+    userStatus:{
+        type:Boolean,
+        default:false
+    },
     tokens:[{
         token:{type:String}
     }]

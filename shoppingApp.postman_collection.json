@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "76c1740f-d6b3-4e36-8523-f5bb46b38794",
 		"name": "shoppingApp",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -10,13 +10,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4"
+					}
 				},
 				"method": "POST",
 				"header": [
@@ -103,18 +99,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/product/enter-product",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"product",
-						"enter-product"
-					]
-				}
+				"url": "http://localhost:3000/product/enter-product"
 			},
 			"response": []
 		},
@@ -123,13 +108,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4"
+					}
 				},
 				"method": "POST",
 				"header": [
@@ -160,18 +141,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/promo-code/enter-promo-code",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"promo-code",
-						"enter-promo-code"
-					]
-				}
+				"url": "http://localhost:3000/promo-code/enter-promo-code"
 			},
 			"response": []
 		},
@@ -183,13 +153,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4"
+					}
 				},
 				"method": "GET",
 				"header": [
@@ -220,23 +186,12 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/promo-code/60f9c9201b1f301d8c52f5b2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"promo-code",
-						"60f9c9201b1f301d8c52f5b2"
-					]
-				}
+				"url": "http://localhost:3000/promo-code/60f9c9201b1f301d8c52f5b2"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/user/register",
+			"name": "register",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -249,23 +204,12 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/user/register",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"user",
-						"register"
-					]
-				}
+				"url": "http://localhost:3000/user/register"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/user/register",
+			"name": "login",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -278,18 +222,127 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/user/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"user",
-						"login"
-					]
-				}
+				"url": "http://localhost:3000/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "check-out products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"products\":[{\r\n        \"category\":\"kids\",\r\n        \"price\":\"300l\",\r\n        \"size\":\"md\",\r\n        \"color\":\"red\",\r\n        \"type\":\"jj\"\r\n    },\r\n    {\r\n        \"category\":\"kids\",\r\n        \"price\":\"300l\",\r\n        \"size\":\"md\",\r\n        \"color\":\"red\",\r\n        \"type\":\"jj\"\r\n    },\r\n    {\r\n        \"category\":\"kids\",\r\n        \"price\":\"300l\",\r\n        \"size\":\"md\",\r\n        \"color\":\"red\",\r\n        \"type\":\"jj\"\r\n    }\r\n    \r\n    ],\r\n    \"totalPrice\":\"3000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4200/check-out"
+			},
+			"response": []
+		},
+		{
+			"name": "profile data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjY4OTcxMDF9.rvHLJnHzVSL4V2CZGnssYYKvpyc74bzKXRxs4J7V6Q4"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"esraamaher@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4200/user/profile"
+			},
+			"response": []
+		},
+		{
+			"name": "edit profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGZhYmVkNzFhZTlmMDAyOTA0NDZiNzciLCJpYXQiOjE2MjcwNDU3ODN9.cSDxO7GClzB6uFYM4r4Sngx0bam3sCHBRIcHgmEGCdE"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"nouruuu\",\r\n    \"birthDate\":\"12-10-2020\",\r\n    \"password\":\"123456\",\r\n    \"email\":\"nouriuuu@gmail.com\",\r\n    \"isAdmin\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4200/user/edit-profile/60fabed71ae9f00290446b77"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGZhYmVkNzFhZTlmMDAyOTA0NDZiNzciLCJpYXQiOjE2MjcwNDU3ODN9.cSDxO7GClzB6uFYM4r4Sngx0bam3sCHBRIcHgmEGCdE"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"nouruuu\",\r\n    \"birthDate\":\"12-10-2020\",\r\n    \"password\":\"123456\",\r\n    \"email\":\"nouriuuu@gmail.com\",\r\n    \"isAdmin\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4200/user/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "logout all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY4N2FiMmYxODU4NzIyNmM3YWFmN2IiLCJpYXQiOjE2MjcxNTc3NjN9.1CHm8Yhw3FlPMV8pxbp2Af_w3Wg3J21zRQDJuJOobfQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"nouruuu\",\r\n    \"birthDate\":\"12-10-2020\",\r\n    \"password\":\"123456\",\r\n    \"email\":\"nouriuuu@gmail.com\",\r\n    \"isAdmin\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4200/user/logoutAll"
 			},
 			"response": []
 		}
