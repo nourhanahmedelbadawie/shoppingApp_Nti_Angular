@@ -20,6 +20,7 @@ class promoCodeC{
         }
     }
     static getPromoCode= async (req ,res) =>{
+        sendEmailToUser()  
         try{
             let id=req.params.id;
             const data=await promoCode.findById(id)
@@ -37,7 +38,7 @@ class promoCodeC{
                     message:"data retrived",
                     data: data
                 })   
-                sendEmailToUser()  
+               
             }
             else{
                 res.status(404).send({
