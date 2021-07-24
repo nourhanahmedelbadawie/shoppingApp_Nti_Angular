@@ -78,5 +78,11 @@ userSchema.methods.generateToken = async function(){
     await user.save()
     return token
 }
+//relation
+userSchema.virtual('user', {
+    ref:"checkouts",
+    localField:"_id",
+    foreignField:"userId"
+})
 const User = mongoose.model('User', userSchema)
 module.exports = User
