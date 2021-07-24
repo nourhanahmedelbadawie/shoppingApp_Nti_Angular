@@ -1,6 +1,9 @@
 
 
 const emailUser=(email)=>{
+    try{
+
+   
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -23,6 +26,14 @@ const emailUser=(email)=>{
           console.log('Email sent: ' + info.response);
         }
       })
+    }
+    catch(e){
+        res.status(500).send({
+       
+            message: "error inserting data",
+           
+        })
+    }
 }
 
 module.exports = emailUser

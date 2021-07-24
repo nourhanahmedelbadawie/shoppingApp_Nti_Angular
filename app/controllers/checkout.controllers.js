@@ -14,7 +14,7 @@ class CheckOutC{
                 message: "success",
                 data: checkoutData
             })
-            sendEmailToUSer(req.user.email)
+           await sendEmailToUSer(req.user.email)
         }
         catch(e){
             res.status(500).send({
