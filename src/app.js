@@ -6,6 +6,8 @@ const userRoutes = require('../routes/user.route')
 const productRoutes = require('../routes/product.route')
 const promoCodeRoutes = require('../routes/promoCode.route')
 
+const chatRoutes = require('../routes/chat.route')
+
 const app = express()
 app.use(cors())
 
@@ -14,4 +16,7 @@ app.use(express.json())
 app.use('/user',userRoutes)
 app.use('/product',productRoutes)
 app.use('/promo-code',promoCodeRoutes)
+
+app.use('/chat',chatRoutes)
+
 module.exports = app
