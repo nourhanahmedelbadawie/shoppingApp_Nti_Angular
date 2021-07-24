@@ -119,5 +119,31 @@ class Userx{
     res.send(e)
         }
     }
+   // edit profile
+   static editProfile =async(req,res)=>{
+    try{
+        const user = await User.findByIdAndUpdate(req.params.id, req.body, {runValidators:true, new:true})
+        if(!user) {
+            res.status(404).send({
+                apiStatus: false,
+                message: "user not found"
+            })
+        }else{
+            res.status(200).send({
+                apiStatus: true,
+                data: user,
+                message: "updated"
+            })
+        }
+    }
+    catch(e){
+        res.status(500).send({
+            apiStatus: false,
+            data: e.message,
+            message: "error"
+        })
+    }
+
+   }
 }
 module.exports = Userx
