@@ -8,4 +8,5 @@ router.post('/activate/:otp', userController.activateUser)
 router.post('/logout', auth,userController.logout)
 router.post('/logoutAll', auth,userController.logoutAll)
 router.post('/me', auth,userController.me)
+
 module.exports=router
