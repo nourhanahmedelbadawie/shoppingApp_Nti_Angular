@@ -7,5 +7,6 @@ router.post('/login', userController.login)
 router.post('/activate/:otp', userController.activateUser)
 router.post('/logout', auth,userController.logout)
 router.post('/logoutAll', auth,userController.logoutAll)
-router.post('/me', auth,userController.me)
+router.post('/profile', auth,userController.me)
+router.patch('/edit-profile/:id', auth,userController.editProfile)
 module.exports=router
