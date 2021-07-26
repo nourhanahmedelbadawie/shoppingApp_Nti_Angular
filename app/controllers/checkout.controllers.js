@@ -26,8 +26,16 @@ class CheckOutC{
     }
 }
 const sendEmailToUSer = async(email)=>{
+     
+    let mailOptions = {
+        from: 'nourhanahmedelbadawe@gmail.com',
+        to: email,
+        subject: 'promocode',
+        text: 'promocode added successfuly!'
+      };
+      
     try {
-     await emailUser(email)
+     await emailUser(mailOptions)
     
     }
     catch(e){

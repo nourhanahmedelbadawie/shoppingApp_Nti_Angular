@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer')
-const emailUser=(email)=>{
+const emailUser=(mailOptions)=>{
     try{
     var transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -8,14 +8,7 @@ const emailUser=(email)=>{
           pass: '12119942010'
         }
       });
-      
-      var mailOptions = {
-        from: 'nourhanahmedelbadawe@gmail.com',
-        to: email,
-        subject: 'promocode',
-        text: 'promocode added successfuly!'
-      };
-      
+     
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
