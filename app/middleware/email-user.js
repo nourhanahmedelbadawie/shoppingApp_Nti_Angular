@@ -1,8 +1,6 @@
 const nodemailer = require('nodemailer')
 const emailUser=(email)=>{
     try{
-
-   
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
