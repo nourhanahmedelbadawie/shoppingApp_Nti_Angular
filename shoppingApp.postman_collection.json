@@ -345,6 +345,27 @@
 				"url": "http://localhost:4200/user/logoutAll"
 			},
 			"response": []
+		},
+		{
+			"name": "shop-sale",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"esraamaher952@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4100/product/shop-sale"
+			},
+			"response": []
 		}
 	]
 }
