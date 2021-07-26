@@ -1,21 +1,18 @@
 const nodemailer = require('nodemailer')
-const emailUser=(email)=>{
+const emailUser=(mailOptions)=>{
     try{
     var transporter = nodemailer.createTransport({
         service: 'gmail',
+        Secure: false,
+        port: 587,
         auth: {
-          user: 'nourhanahmedelbadawe@gmail.com',
-          pass: '12119942010'
+          user: 'noreplay.OPSPv1@gmail.com',
+          pass: 'Matrix219'
         }
+
+
       });
-      
-      var mailOptions = {
-        from: 'nourhanahmedelbadawe@gmail.com',
-        to: email,
-        subject: 'promocode',
-        text: 'promocode added successfuly!'
-      };
-      
+     
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
