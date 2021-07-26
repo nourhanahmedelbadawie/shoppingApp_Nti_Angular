@@ -169,7 +169,6 @@ class Userx{
         // }
 
         const link = `${process.env.BASE_URL}/password-reset/${id}/${token}`;
-        console.log(user.email)
         await sendEmail(user.email);
         res.send("password reset link sent to your email account");
     } catch (error) {

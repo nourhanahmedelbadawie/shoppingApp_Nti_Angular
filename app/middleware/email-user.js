@@ -3,6 +3,10 @@ const emailUser=(email)=>{
     try{
     var transporter = nodemailer.createTransport({
         service: 'gmail',
+        secure:false,
+        tls:{
+          rejectUnauthorized:false
+        },
         auth: {
           user: 'nourhanahmedelbadawe@gmail.com',
           pass: '12119942010'

@@ -65,6 +65,27 @@ class ProductC{
             })
         }
     }
+
+    //get product has sale
+    static getProductHasSale = async(req,res)=>{
+        try{
+            const allProduct = await Product.find()
+            const productHasSale=allProduct.filter(ele=>ele.hasSale)
+            res.status(200).send({
+                apiStatus:true,
+                message:"data retrived",
+                data: productHasSale,
+                count: productHasSale.length
+            })           
+        }
+        catch(e){
+            res.status(500).send({
+                apiStatus:false,
+                message:"error loading data",
+            })
+        }
+      
+    }
     
 }
 module.exports = ProductC
