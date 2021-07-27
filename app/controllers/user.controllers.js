@@ -170,9 +170,7 @@ class Userx{
         // }
 
         const link = `${process.env.BASE_URL}/password-reset/${id}/${token}`;
-<<<<<<< HEAD
         await sendEmail(user.email);
-=======
         console.log(user.email)
         let mailOptions = {
             from: 'nourhanahmedelbadawe@gmail.com',
@@ -182,7 +180,6 @@ class Userx{
           };
           
         await sendEmail(mailOptions);
->>>>>>> 0ce7c1ee27176d03ba579d21c02e01165182fe0e
         res.send("password reset link sent to your email account");
     } catch (error) {
         res.send("An error occured");
