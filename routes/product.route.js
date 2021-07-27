@@ -9,6 +9,7 @@ router.post('/enter-product',auth,upload.array('products'),productController.ent
 router.get('/allproducts',productController.getAllPdt)
 router.get('/allproducts/:id',productController.getSinglePdt)
 
+router.get('/shop-sale',productController.getProductHasSale)
 
 
 module.exports=router

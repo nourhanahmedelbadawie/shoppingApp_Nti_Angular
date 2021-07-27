@@ -345,6 +345,78 @@
 				"url": "http://localhost:4200/user/logoutAll"
 			},
 			"response": []
+		},
+		{
+			"name": "shop-sale",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"esraamaher952@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4100/product/shop-sale"
+			},
+			"response": []
+		},
+		{
+			"name": "enter info app",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGZhYmVkNzFhZTlmMDAyOTA0NDZiNzciLCJpYXQiOjE2MjcxNTUxNTZ9.DkO9IIM8rWSW5CptkHQktFuz9ioMYNsqZqHU3NvvR0Q"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phones\":[\"01551682766\"],\r\n    \"addresses\":\"test\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ourApp\":\"test\",\r\n    \"privacyPolicy\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4100/info/enter-info-app"
+			},
+			"response": []
+		},
+		{
+			"name": "get info app",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGZhYmVkNzFhZTlmMDAyOTA0NDZiNzciLCJpYXQiOjE2MjcxNTUxNTZ9.DkO9IIM8rWSW5CptkHQktFuz9ioMYNsqZqHU3NvvR0Q"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phones\":[\"01551682766\"],\r\n    \"addresses\":\"test\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ourApp\":\"test\",\r\n    \"privacyPolicy\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4100/info/get-info-app"
+			},
+			"response": []
 		}
 	]
 }

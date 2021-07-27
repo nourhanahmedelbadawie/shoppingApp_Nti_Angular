@@ -5,6 +5,9 @@ const emailUser=(mailOptions)=>{
         service: 'gmail',
         Secure: false,
         port: 587,
+        tls:{
+          rejectUnauthorized:false
+        },
         auth: {
           user: 'noreplay.OPSPv1@gmail.com',
           pass: 'Matrix219'
