@@ -17,6 +17,8 @@ const userSchema = new mongoose.Schema({
         type:String,
         trim:true,
         required:true,
+        minLength:6,
+        maxlength:8
     },
     email:{
         type:String,
@@ -34,7 +36,8 @@ const userSchema = new mongoose.Schema({
     },
     phone:{
         type:String,
-        trim:true
+        trim:true,
+        minlength:11
     },
     addresses:[
         {
