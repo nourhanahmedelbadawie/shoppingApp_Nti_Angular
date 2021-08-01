@@ -17,7 +17,7 @@ class Userx{
         catch(e){
             res.status(500).send({
                 apiStatus: false,
-                data: e.message, 
+                data: e, 
                 message: "error adding new user"
             })
         }

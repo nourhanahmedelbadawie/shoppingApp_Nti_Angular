@@ -16,9 +16,7 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         trim:true,
-        required:true,
-        minLength:6,
-        maxlength:8
+        required:true
     },
     email:{
         type:String,
@@ -49,10 +47,6 @@ const userSchema = new mongoose.Schema({
     otp:{
         type:String,
         default: Date.now()
-    },
-    userStatus:{
-        type:Boolean,
-        default:false
     },
     tokens:[{
         token:{type:String}

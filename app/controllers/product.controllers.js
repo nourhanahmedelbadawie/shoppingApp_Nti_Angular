@@ -52,7 +52,7 @@ class ProductC{
     static getSinglePdt =async (req,res)=>{
         try{
             let id=req.params.id;
-            const data=    await Product.findById(id)
+            const data=await Product.findById(id)
             if(data){
                 res.send(data)
             }}
@@ -85,6 +85,24 @@ class ProductC{
             })
         }
       
+    }
+    //get product bt category
+    static getPdtByCategory=async (req,res)=>{
+        let category=req.params.category;
+        try{
+            const data=await Product.find({category})
+            if(data){
+                res.send(data)
+            }}
+        
+        catch(e){
+            res.status(500).send({
+                apiStatus:false,
+                message:"error",
+                data: e
+            })
+        }
+
     }
     
 }
