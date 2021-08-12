@@ -1,0 +1,93 @@
+<div class="container">
+
+    <div *ngIf="!Viewsignup" >
+      <div class="container">
+        <div class="row">
+          <button (click)="setActivAdmin()" class="btn btn-primary">Admin</button>
+          <button (click)="setActiveUser()"class="btn btn-warning" >User </button>
+        </div>
+      </div>
+    
+    </div>
+    <ng-container *ngIf="Viewsignup">
+      <div class="row">
+
+
+    <div class="alert alert-light" role="alert">Sign up</div>
+    <form [formGroup]="userData" (ngSubmit)="signup()" class="login-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name" required />
+        <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>password</mat-label>
+        <input
+          matInput
+          placeholder="******"
+          formControlName="pass"
+          required
+          type="password"
+        />
+        <!-- <mat-error *ngIf="userData.controls['pass'].invalid">{{ getErrorMessage('pass') }}</mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input
+          matInput
+          placeholder="pat@example.com"
+          formControlName="email"
+          type="email"
+          required
+        />
+        <!-- <mat-error *ngIf="userData.controls['email'].invalid">{{ getErrorMessage('email') }}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Bith date</mat-label>
+        <input
+          matInput
+          placeholder="11-2-20120"
+          formControlName="birthDate"
+          required
+          type="date"
+        />
+        <!-- <mat-error *ngIf="userData.controls['birthDate'].invalid">{{ getErrorMessage('birthDate') }}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Phone</mat-label>
+        <input
+          matInput
+          placeholder="phone"
+          formControlName="phone"
+          required
+          type="tel"
+        />
+        <!-- <mat-error *ngIf="userData.controls['birthDate'].invalid">{{ getErrorMessage('birthDate') }}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input
+          matInput
+          placeholder="Address"
+          formControlName="addresses"
+          required
+          type="text"
+        />
+        <!-- <mat-error *ngIf="userData.controls['birthDate'].invalid">{{ getErrorMessage('birthDate') }}</mat-error> -->
+      </mat-form-field>
+      <button type="submit">submit</button>
+    </form>
+  </div>
+
+
+</ng-container>
+</div>
+<!-- {
+    "name":"nour",
+    "birthDateDate":"12-10-2020",
+    "password":"123456",
+    "email":"nour@gmail.com",
+    "isAdmin":true
+} -->

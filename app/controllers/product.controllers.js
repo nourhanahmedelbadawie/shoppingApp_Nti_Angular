@@ -4,6 +4,7 @@ class ProductC{
     static enterProduct =async (req,res)=>{
         try{
             const productData=new Product(req.body);
+            console.log(req.files)
             await productData.save();
             productData.images=[];
             req.files.forEach((el,i)=>{

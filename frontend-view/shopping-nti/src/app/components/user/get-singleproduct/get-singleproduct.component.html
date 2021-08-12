@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div >
+
+    
+
+      <mat-card
+     
+      >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ product.category }}</mat-card-title>
+          <mat-card-subtitle>{{ product.type }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          [src]="
+            product.images[0]
+              ? product.images[0]
+              : 'https://picsum.photos/200/300?random={{1+j}}'
+          "
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>
+          <div *ngFor="let i of product.colors">
+            {{ i }}
+          </div>
+          <div *ngFor="let i of product.sizes">
+            {{ i }}
+          </div>
+  
+          <p>
+            {{ product.AvailableInStock }}
+          </p>
+          <p>
+            {{ product.hasSale }}
+          </p>
+          <p>
+            {{ product.priceAfterSale }}
+          </p>
+          <p>
+            {{ product.priceBeforSale }}
+          </p>
+  
+        </mat-card-content>
+        <button (click)="goCheckOut()"> add</button>
+      </mat-card>
+    </div>
+    </div>
+  </div>
+  

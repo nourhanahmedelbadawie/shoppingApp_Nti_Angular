@@ -1,0 +1,28 @@
+<h3>add-promocode </h3>
+<form [formGroup]="newPromocode" (ngSubmit)="addPromocode()" class="login-container">
+    <mat-form-field appearance="fill">
+      <mat-label>promocode</mat-label>
+      <input matInput placeholder="Category" formControlName="promoCode" required />
+      <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+
+    <mat-label>start date</mat-label>
+    <input matInput  placeholder="" type="date" formControlName="startDate" required />
+    <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+
+  <mat-label>end date</mat-label>
+  <input matInput placeholder="" type="date" formControlName="endDate" required />
+  <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+</mat-form-field>
+<mat-form-field appearance="fill">
+
+<mat-label>Discount</mat-label>
+<input matInput placeholder="Discount"  type="number" formControlName="discountValue" required />
+<!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+</mat-form-field>
+<button type="submit"class="btn btn-primary">Add promocode</button>
+
+    </form>

@@ -1,0 +1,90 @@
+<!-- <div *ngFor=""> -->
+
+
+
+ 
+<!-- </div> -->
+
+
+<form [formGroup]="pdtData" (ngSubmit)="addnewPdt()" class="login-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <input matInput placeholder="Category" formControlName="category" required />
+    <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+  </mat-form-field>
+  <!-- images -->
+    <mat-label>Images</mat-label>
+    <!-- <input type="file" class="form-control" formControlName="images" (change)="handleFile($event)"> -->
+    <div class="mt-2 mb-2">
+    <input type="file" class="form-control" name="files" (change)="handleFile($event)">
+  </div>
+
+    <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+    
+  <mat-form-field appearance="fill">
+    <mat-label>Sizes</mat-label>
+    <input matInput placeholder="Size" formControlName="sizes" required />
+    <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+  </mat-form-field>  
+  <mat-form-field appearance="fill">
+    <mat-label>type</mat-label>
+    <input matInput placeholder="Type" formControlName="type" required />
+    <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+  </mat-form-field>  
+  <mat-form-field appearance="fill">
+    <mat-label>price before sale</mat-label>
+    <input matInput placeholder="price before sale" formControlName="priceBeforSale" required />
+    <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+  </mat-form-field>  
+  <mat-form-field appearance="fill">
+    <mat-label>price after sale</mat-label>
+    <input matInput placeholder="price after sale" formControlName="priceAfterSale" required />
+    <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+  </mat-form-field>  
+  <mat-form-field appearance="fill">
+    <mat-label>Available In Stock</mat-label>
+    <input matInput placeholder="Available In Stock" formControlName="availableInStock" required />
+    <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+  </mat-form-field>  
+  <mat-form-field appearance="fill">
+    <mat-label>colors</mat-label>
+    <input matInput placeholder="colors" formControlName="colors" required />
+    <!-- <mat-error *ngIf="userData.controls['name'].invalid">{{ getErrorMessage('name') }}</mat-error> -->
+  </mat-form-field>  
+    <mat-label><h4>choose</h4></mat-label>
+    <div>
+
+   
+   <label>Has sale</label>   <input type="radio"   formControlName="hasSale" value=true/>
+  </div>
+   <br/>
+   <div>
+
+
+   <label>Not sale</label>    <input type="radio"   formControlName="hasSale"value=false/>
+
+  </div>
+<button type="submit"class="btn btn-primary">Add profuct</button>
+
+  
+  </form>
+
+
+
+
+  Category
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+products?:string[],
+sizes?: number[],
+colors?:string[], -->

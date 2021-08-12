@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <mat-card
+      class="example-card col-md-4"
+      *ngFor="let p of products; let j = index"
+    >
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ p.category }}</mat-card-title>
+        <mat-card-subtitle>{{ p.type }}</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        [src]="
+          p.images[0]
+            ? p.images[0]
+            : 'https://picsum.photos/200/300?random={{1+j}}'
+        "
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <div *ngFor="let i of p.colors">
+          {{ i }}
+        </div>
+        <div *ngFor="let i of p.sizes">
+          {{ i }}
+        </div>
+
+        <p>
+          {{ p.AvailableInStock }}
+        </p>
+        <p>
+          {{ p.hasSale }}
+        </p>
+        <p>
+          {{ p.priceAfterSale }}
+        </p>
+        <p>
+          {{ p.priceBeforSale }}
+        </p>
+
+        <a routerLink="{{ p._id }}">Show details</a>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

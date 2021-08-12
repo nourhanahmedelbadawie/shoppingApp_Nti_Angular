@@ -1,0 +1,121 @@
+
+
+
+<div *ngIf="!ViewLogin" >
+  <div class="container">
+    <div class="row d-flex align-item center jus">
+      <button (click)="setActivAdmin()" class="btn btn-primary">Admin</button>
+      <button (click)="setActiveUser()"class="btn btn-warning" >User </button>
+    </div>
+  </div>
+
+</div>
+<ng-container *ngIf="ViewLogin">
+  <div class="container">
+    <div class="row">
+      <div class="login">
+        <div class="login-triangle"></div>
+        
+        <h2 class="login-header">Log in</h2>
+      
+        <form [formGroup]="userData" (ngSubmit)="login()" class="login-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input
+              matInput
+              placeholder="pat@example.com"
+              formControlName="email"
+              type="email"
+              required
+            />
+            <!-- <mat-error *ngIf="userData.controls['email'].invalid">{{ getErrorMessage('email') }}</mat-error> -->
+    
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>password</mat-label>
+            <input
+              matInput
+              placeholder="******"
+              formControlName="pass"
+              required
+              type="password"
+            />
+            <!-- <mat-error *ngIf="userData.controls['pass'].invalid">{{ getErrorMessage('pass') }}</mat-error> -->
+          </mat-form-field>
+    
+     
+             <button type="submit">submit</button>
+    
+        </form>
+        <div class="alert alert-primary" role="alert">
+         you don't have accout <a routerLink="/signup">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+</ng-container>
+
+
+
+  
+
+
+<!-- 
+  import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { GlobalService } from 'src/app/services/global.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+isLoginSubmitted = false
+  userData = new FormGroup({
+    email:new FormControl("", [Validators.required,  Validators.email]),
+    password:new FormControl("", [Validators.required, Validators.minLength(6), Validators.maxLength(20)])
+  })
+
+  constructor(public _user:GlobalService, private toastr: ToastrService, private _roter:Router) {
+    if(localStorage.getItem('token')) _roter.navigate(['/'])
+   }
+  msg=""
+  ngOnInit(): void {
+
+  }
+  get email(){return this.userData.get('email')}
+  get password(){return this.userData.get('password')}
+
+  loginUser(){
+    this.isLoginSubmitted=true
+    if(this.userData.valid){
+      // this.msg = this.userData.value.email + " " + this.userData.value.password
+      this._user.login(this.userData.value).subscribe(
+        (response) => {
+          localStorage.setItem('token', response.access_token)
+          this._user.loginFlag=true
+      },
+      (e)=>{
+        this.showError()
+      },
+      ()=>{
+        console.log('done');
+        this._roter.navigateByUrl('/')
+      }
+      )
+    }
+    else{
+      this.msg="please check your inputs"
+    }
+  }
+  showError() {
+    this.toastr.error('Invalid email');
+  }
+
+}
+ -->
